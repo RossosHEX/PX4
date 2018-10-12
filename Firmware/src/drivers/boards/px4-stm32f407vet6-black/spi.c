@@ -84,7 +84,7 @@ static void stm32_spi3_initialize(void)
 {
 	stm32_configgpio(GPIO_SPI3_CS_PB0);
 }
-#endif //CONFIG_STM32_SPI4
+#endif //CONFIG_STM32_SPI3
 
 __EXPORT void stm32_spiinitialize(void)
 {
@@ -96,9 +96,9 @@ __EXPORT void stm32_spiinitialize(void)
 	
 #endif
 
-#ifdef CONFIG_STM32_SPI3
-	stm32_spi4_initialize();
-#endif
+//~ #ifdef CONFIG_STM32_SPI4
+	//~ stm32_spi4_initialize();
+//~ #endif
 }
 
 #ifdef CONFIG_STM32_SPI1
