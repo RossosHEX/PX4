@@ -32,7 +32,7 @@
  ****************************************************************************/
 
 /**
- * @file px4fmu_spi.c
+ * @file px4-stm32f4ve_spi.c
  *
  * Board-specific SPI functions.
  */
@@ -126,7 +126,6 @@ __EXPORT void stm32_spi1select(FAR struct spi_dev_s *dev, uint32_t devid, bool s
 		stm32_gpiowrite(GPIO_SPI1_CS_MPU, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_GYRO, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_BARO, 1);
-		//~ stm32_gpiowrite(GPIO_SPI_CS_ICM_2060X, !selected);
 		stm32_gpiowrite(GPIO_SPI1_CS_LPS331AP, 1);
 		break;
 
@@ -135,7 +134,6 @@ __EXPORT void stm32_spi1select(FAR struct spi_dev_s *dev, uint32_t devid, bool s
 		stm32_gpiowrite(GPIO_SPI1_CS_MPU, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_GYRO, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_BARO, !selected);
-		//~ stm32_gpiowrite(GPIO_SPI_CS_ICM_2060X, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_LPS331AP, 1);
 		break;
 
@@ -144,7 +142,6 @@ __EXPORT void stm32_spi1select(FAR struct spi_dev_s *dev, uint32_t devid, bool s
 		stm32_gpiowrite(GPIO_SPI1_CS_MPU, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_GYRO, !selected);
 		stm32_gpiowrite(GPIO_SPI1_CS_BARO, 1);
-		//~ stm32_gpiowrite(GPIO_SPI_CS_ICM_2060X, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_LPS331AP, 1);
 		break;
 
@@ -153,7 +150,6 @@ __EXPORT void stm32_spi1select(FAR struct spi_dev_s *dev, uint32_t devid, bool s
 		stm32_gpiowrite(GPIO_SPI1_CS_MPU, !selected);
 		stm32_gpiowrite(GPIO_SPI1_CS_GYRO, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_BARO, 1);
-		//~ stm32_gpiowrite(GPIO_SPI_CS_ICM_2060X, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_LPS331AP, 1);
 		break;
 
@@ -162,7 +158,6 @@ __EXPORT void stm32_spi1select(FAR struct spi_dev_s *dev, uint32_t devid, bool s
 		stm32_gpiowrite(GPIO_SPI1_CS_MPU, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_GYRO, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_BARO, 1);
-		//~ stm32_gpiowrite(GPIO_SPI_CS_ICM_2060X, 1);
 		stm32_gpiowrite(GPIO_SPI1_CS_LPS331AP, !selected);
 		break;
 
